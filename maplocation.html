@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Buradaki kod blokları farklı yazı tipleri ve simgeleri içeriyor Google'a ait (font) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Outfit:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--(maplocation.css) bağlantı sağlar.-->
+  <!-- Stil Dosyası (stylesheet) -->
+  <link rel="stylesheet" href="maplocation.css">
+
+
+  <title> (Art Galery) Selin Gürel | Location</title>
+</head>
+
+<body>
+
+  <!-- Bu kısımda map(harita) gösterimi ve butonumuz var (anasayfaya geri dönmek için bir bağlantı içeriyor) -->
+
+  <div class="map">
+    <div class="map__btn--wrapper">
+      <button class="map__home--link">
+        <div class="map__arrow--l">
+          <img class="map__arrow--icon" src="./assets/icon-arrow-left.svg" alt="left arrow icon">
+        </div>
+        <a class="map__home-link--text" href="index.html">Back to Home</a>
+      </button>
+      <div class="map__image--wrapper">
+        <picture>
+          <source class="map__image" srcset="./assets/desktop/image-map.png, ./assets/desktop/image-map@2x.png">
+          <source class="map__image" srcset="./assets/tablet/image-map.png, ./assets/tablet/image-map@2x.png">
+          <img class="map__image" src="./assets/mobile/image-map.png" srcset="./assets/mobile/image-map@2x.png" alt="map location">
+        </picture>
+      </div>
+    </div>
+  </div>
+  <!--*************************************************-->
+
+  <!-- Konum(location) ana bölüm bilgisi -->
+  <!--Art Galery'e ait adres bilgisi ve açıklamalar...-->
+
+  <main class="location">
+    <h1 class="location__title">Our<span class="location__title--span"></span> location</h1>
+    <div class="location__info">
+      <h2 class="location__address--title">99 King Street</h2>
+      <p class="location__address">
+        Newport <br>
+        RI 02840 <br>
+        United States of America <br>
+      </p><br>
+      <p class="location__description">
+        Our newly opened gallery is located near the Edward King House on 99 King Street, the Modern Art Gallery is free
+        to all visitors and open seven days a week from 8am to 9pm.
+      </p>
+    </div>
+  </main>
+ <!--*************************************************-->
+
+  <!-- Sitenin Footer(altbilgi) bölümü -->
+  <!--Galeri hakkında bilgiler,adres,sosyal medya hesapları bu bölümde...-->
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__col--1">
+        <h3 class="footer__title">Modern <br> Art Gallery</h3>
+      </div>
+      <div class="footer__col--2">
+        The Modern Art Gallery is free to all visitors and open seven days a week
+        from 8am to 9pm. Find us at 99 King Street, Newport, USA.
+      </div>
+      <div class="footer__col--3">
+        <a class="footer__social--link1" href="facebook.com"><i class="fab fa-facebook-square"></i></a>
+        <a class="footer__social--link2" href="instagram.com"><i class="fab fa-instagram"></i></a>
+        <a class="footer__social--link3" href="twitter.com"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+  
+
+</html>
