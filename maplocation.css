@@ -1,0 +1,276 @@
+:root {
+    --accent: #D5966C;      /* (vurgu rengi) */
+    --heading: #151515;     /* (başlık rengi) */
+    --body-text: #444444;   /* (metin rengi) */
+    --background: #FFFFFF;  /* (arkaplan rengi) */
+}
+/***************************************************/
+        /* Sitenin genel stiliyle ilgili... */
+*,
+* ::before,
+* ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+body {
+    background-color: var(--background);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+}
+
+/***************************************************/
+
+/* sayfanın farklı bölümleri için arkaplan rengi, yazı tipi, yazı rengi, 
+boyutları, kenar boşlukları ve hizalamaları gibi özellikler... */
+
+
+.footer p,
+.footer__title,
+i {
+    color: var(--heading);
+}
+
+.location__title,
+.location__address--title,
+.footer__title {
+    font-family: 'Big Shoulders Display', sans-serif;
+    text-transform: uppercase;
+}
+
+
+.location__title,
+.location p {
+    color: var(--background);
+}
+
+.location__title {
+    font-size: 3.125rem;
+    line-height: 2.185rem;
+}
+
+.location__address--title {
+    color: var(--accent);
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+i {
+    font-size: 1.25rem;
+}
+
+
+.location {
+    background-color: var(--heading);
+    padding: 3rem 1rem 3.5rem 1rem;
+}
+
+.location__info {
+    margin-top: 3rem;
+}
+
+.location__info .location__address--title,
+.address {
+    margin-bottom: 20px;
+}
+
+
+.location__info,
+.footer__wrapper {
+    max-width: 21.4375rem;
+}
+
+.footer {
+    background-color: var(--accent);
+    padding: 3rem 1rem;
+}
+
+.footer__col--1,
+.footer__col--2 {
+    margin-bottom: 2.375rem;
+}
+
+i:hover {
+    color: var(--background);
+}
+
+.fa-facebook-square,
+.fa-instagram {
+    margin-right: 1.25rem;
+}
+
+
+#map {
+    height: 50%;
+}
+
+.map__image--wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.map__arrow--l,
+.map__home--link a {
+    align-items: center;
+    display: flex;
+    height: 4.5rem;
+    justify-content: center;
+}
+
+.map button a {
+    align-items: center;
+    background-color: var(--heading);
+    color: var(--background);
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 3.64px;
+    line-height: 1.49625rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 208px;
+}
+
+button:hover .map__arrow--l {
+    background-color: var(--heading);
+}
+
+button:hover a {
+    background-color: var(--accent);
+}
+
+button:hover .map__arrow--l,
+button:hover a {
+    transition: all .3s ease-out;
+}
+
+.map__arrow--l {
+    background-color: var(--accent);
+    width: 56px;
+}
+
+.map__home--link {
+    border: none;
+    display: flex;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 500;
+}
+/***************************************************/ 
+
+@media screen and (min-width: 768px) {
+    /* ekran genişliği en az 768 piksel olan cihazlar için */
+    /* Tipografik (yazı karakteri, boyutu, renkleri vb.) -- " Tablet " */
+
+    .location__title {
+        font-size: 3.4375rem;
+        line-height: 3.125rem;
+    }
+
+    .location p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+
+    .footer p {
+        font-size: 1rem;
+        line-height: 1.625rem;
+    }
+
+    /* Location Düzen - " Tablet " */
+    .location {
+        display: grid;
+        grid-template-columns: 1fr 398px;
+        justify-content: space-between;
+        padding: 5.5rem 2.4375rem 5rem 2.4375rem;
+    }
+
+    .location__title span::before {
+        content: "\A";
+        white-space: pre;
+    }
+
+    .location__info {
+        margin-top: 0;
+        max-width: 398px;
+    }
+
+    .map__home--link {
+        left: 2.4375rem;
+    }
+
+    /* Footer (altbilgi)  - " Tablet " */
+    .footer {
+        padding: 3.5rem 2.4375rem;
+    }
+
+    .footer__wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 689px;
+    }
+
+    .footer__col--2 {
+        width: 17.5625rem;
+    }
+
+
+}
+/***************************************************/
+
+@media screen and (min-width: 1000px) {
+    /*ekran genişliği 1000 pikselden büyük olan cihazlar için*/
+    /* Tipografik (yazı karakteri, boyutu, renkleri vb.) -- " PC " */
+
+    .location__title {
+        font-size: 4.375rem;
+        line-height: 4.375rem;
+    }
+
+    .location__address--title {
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+    }
+
+    .location p {
+        font-size: 1.375rem;
+    }
+
+    .footer p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+
+
+    .location {
+        padding: 6.5rem 10.312rem 8rem 10.312rem;
+    }
+
+    .footer {
+        padding: 5rem 10.312rem;
+        justify-content: center;
+    }
+
+    .footer__wrapper {
+        max-width: 120.375rem;
+    }
+
+    .footer__col--2 {
+        width: 26.875rem;
+    }
+
+
+    .map__home--link {
+        left: 9.75rem;
+    }
+}
